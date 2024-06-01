@@ -5,13 +5,15 @@ import {validateUserName} from "@/src/actions/db/user/validateUserName";
 import {Card} from "@/src/components/layout/Card";
 import {Spinner} from "@/src/components/misc/Spinner";
 import {Input} from "@/src/components/input/Input";
+import {Label} from "@/src/components/layout/Label";
 
 type Props = {
+  title: string;
   onSubmit: (username: string, password: string) => Promise<void>;
   showAvailability: boolean
 }
 
-export const UserForm = ({onSubmit, showAvailability}: Props) => {
+export const UserForm = ({title, onSubmit, showAvailability}: Props) => {
   const [username, setUsername] = useState("");
   const [usernameValid, setUsernameValid] = useState(true);
   const [password, setPassword] = useState("");
@@ -32,9 +34,8 @@ export const UserForm = ({onSubmit, showAvailability}: Props) => {
     if(showAvailability) checkAvailability(username)
   }, [showAvailability, checkAvailability, username]);
 
-  return <div className="flex justify-center items-center w-full h-screen">
-    <Card
-      title={"Create an account"}
+  return <Card
+      title={title}
       footer={<button
         disabled={!username || !usernameValid || !password}
         className="btn btn-primary"
@@ -50,11 +51,16 @@ export const UserForm = ({onSubmit, showAvailability}: Props) => {
             onChange={setUsername}
           />
         </div>
-        {showAvailability && username && <div className="flex flex-row justify-end w-full italic text-xs mt-1">{
-          usernameValid
-            ? <span className="text-green-600">Available</span>
-            : <span className="text-red-600">Unavailable</span>
-        }</div>}
+        {showAvailability && username &&
+          <Label>
+            <div className="flex w-full justify-end">
+              {
+                usernameValid
+                  ? <span className="text-green-600 text-right">Available</span>
+                  : <span className="text-red-600 text-right">Unavailable</span>
+              }
+            </div>
+          </Label>}
 
         <div className="flex flex-row mt-3 w-full">
           <Input
@@ -65,6 +71,5 @@ export const UserForm = ({onSubmit, showAvailability}: Props) => {
           />
         </div>
       </div>
-    </Card>
-  </div>
+    </Card>;
 }

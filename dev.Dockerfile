@@ -3,7 +3,7 @@ FROM node:20-alpine
 WORKDIR /app
 
 COPY package.json package-lock.json* ./
-RUN npm ci
+RUN npm i
 
 COPY src ./src
 COPY prisma ./prisma
@@ -14,5 +14,5 @@ ENV NEXT_TELEMETRY_DISABLED 1
 
 ENTRYPOINT [ "./entrypoint.sh" ]
 
-# Start Next.js in development mode based on the preferred package manager
+# Start Next.js in development mode
 CMD npx next dev
