@@ -1,22 +1,21 @@
 "use server"
 
 import * as bcrypt from "bcryptjs"
-import {db} from "@/src/actions/db/db";
-
-export type UserData = {
-  id?: string;
-  username: string;
-  password: string;
-}
+import {PrismaClient, User} from "@prisma/client";
 
 /**
  * Creates and returns a new user based on the given data
+ * hashes the password
  * @param userData
  */
-export const createUser = async (userData: UserData)=> {
-  const hash = bcrypt.hashSync(userData.password, 10);
+export const createUser = async ({ username, password }: Pick<User, "username"| "password">): Promise<User> => {
+  const prismaClient = new PrismaClient();
 
-  const newUser = await db.query("insert into users (username, password) values ($1, $2)", [userData.username, hash]);
+  const hash = bcrypt.hashSync(password, 10);
 
-  return newUser.rows[0];
+  const newUser: User = await prismaClient.user.create({
+    data: { username, password: hash }
+  });
+
+  return newUser as User;
 }

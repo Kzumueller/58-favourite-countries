@@ -11,6 +11,8 @@ services:
     volumes:
       - ./src:/app/src
       - ./public:/app/public
+      - ./prisma:/app/prisma
+      - ./node_modules:/app/node_modules
     restart: always
     ports:
       - "3000:3000"
@@ -36,6 +38,8 @@ services:
       - hub
     image: adminer
     restart: always
+    depends_on:
+      - postgres
     ports:
       - 8080:8080
 

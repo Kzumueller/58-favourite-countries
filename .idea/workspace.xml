@@ -5,35 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77cf56a8-11fc-4d91-be70-703bd57aba57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prod.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/db/db.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/db/schemas/countries.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/db/schemas/favouriteCountry.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/db/schemas/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/db/schemas/users.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/db/user/createUser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/gql/client.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/gql/fetch-countries.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/instrumentation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrypoint.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/db/user/validateUserName.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/login/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/register/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/input/Input.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/Card.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/misc/Spinner.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/register/RegisterUser.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/user/UserForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useDebounce.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dev.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/db/db.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/db/schemas/countries.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/db/schemas/favouriteCountry.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/db/schemas/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/db/schemas/users.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/db/user/createUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/db/user/createUser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/gql/fetch-countries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/gql/fetch-countries.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/instrumentation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/instrumentation.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +40,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="false" />
+    <option name="myAllFileTypesSelected" value="true" />
+    <option name="mySelectedFileTypes">
+      <set />
     </option>
   </component>
   <component name="Git.Settings">
@@ -65,7 +68,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "js.last.introduce.type": "CONST",
-    "last_opened_file_path": "/home/kevin/Documents/58-favourite-countries-docker/actions/db/schemas",
+    "last_opened_file_path": "/home/kevin/Documents/lighten",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -85,10 +88,11 @@
       <recent name="$PROJECT_DIR$/actions/db/schemas" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/layout" />
+      <recent name="$PROJECT_DIR$/src/components/register" />
       <recent name="$PROJECT_DIR$/next-app/src" />
       <recent name="$PROJECT_DIR$/actions/db/user" />
       <recent name="$PROJECT_DIR$/actions/db" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -130,7 +134,8 @@
       <workItem from="1717180629548" duration="134000" />
       <workItem from="1717180784397" duration="513000" />
       <workItem from="1717181301416" duration="3962000" />
-      <workItem from="1717185617381" duration="8447000" />
+      <workItem from="1717185617381" duration="8688000" />
+      <workItem from="1717225759729" duration="15797000" />
     </task>
     <servers />
   </component>
