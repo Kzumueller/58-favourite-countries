@@ -5,9 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77cf56a8-11fc-4d91-be70-703bd57aba57" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/user/LogOutButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/gql/fetch-countries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/gql/fetch-countries.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/db/country/getCountries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/db/country/getCountries.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/db/favouriteCountry/addFavouriteCountry.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/db/favouriteCountry/addFavouriteCountry.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/db/favouriteCountry/getFavouriteCountries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/db/favouriteCountry/getFavouriteCountries.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/db/user/getCurrentUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/db/user/getCurrentUser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/db/user/signInUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/db/user/signInUser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/gql/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/gql/client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/register/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AuthContextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AuthContextProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AuthSubscriber.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AuthSubscriber.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/favouriteCountry/AddFavouriteCountry.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favouriteCountry/AddFavouriteCountry.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/favouriteCountry/FavouriteCountry.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favouriteCountry/FavouriteCountry.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/favouriteCountry/FavouriteCountryContextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favouriteCountry/FavouriteCountryContextProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/favouriteCountry/FavouriteCountrySubscriber.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favouriteCountry/FavouriteCountrySubscriber.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/favouriteCountry/display/CountryDataPoint.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favouriteCountry/display/CountryDataPoint.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/favouriteCountry/display/CountryLabel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favouriteCountry/display/CountryLabel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/favouriteCountry/display/FavouriteCountryList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favouriteCountry/display/FavouriteCountryList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/favouriteCountry/display/FavouriteCountryPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favouriteCountry/display/FavouriteCountryPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/favouriteCountry/display/Flag.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favouriteCountry/display/Flag.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/Dropdown.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/Select.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/TextArea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/TextArea.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Label.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Label.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Title.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/SignIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/SignIn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/misc/Alert.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/misc/Alert.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/misc/Spinner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/misc/Spinner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/register/RegisterUser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/register/RegisterUser.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/user/UserForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user/UserForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useDebounce.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/instrumentation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/instrumentation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/verifyToken.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/verifyToken.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,26 +75,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "js.last.introduce.type": "CONST",
-    "last_opened_file_path": "/home/kevin/Documents/58-favourite-countries",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "/home/kevin/.nvm/versions/node/v20.12.2/bin/node",
-    "nodejs_package_manager_path": "npm",
-    "npm.run.executor": "Run",
-    "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "/home/kevin/Documents/58-favourite-countries/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/kevin/Documents/58-favourite-countries&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;/home/kevin/.nvm/versions/node/v20.12.2/bin/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.run.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/kevin/Documents/58-favourite-countries/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -117,7 +151,8 @@
       <workItem from="1717225759729" duration="16019000" />
       <workItem from="1717264430609" duration="1890000" />
       <workItem from="1717266579028" duration="15224000" />
-      <workItem from="1717318148394" duration="17069000" />
+      <workItem from="1717318148394" duration="17586000" />
+      <workItem from="1717352072399" duration="2840000" />
     </task>
     <servers />
   </component>

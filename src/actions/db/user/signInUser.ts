@@ -5,6 +5,12 @@ import { SignJWT } from "jose"
 import * as bcrypt from "bcryptjs";
 import { PrismaClient } from "@prisma/client"
 
+/**
+ * validates the given credentials and returns a JWT on success, null otherwise
+ * if this action returns null, signing in failed
+ * @param username
+ * @param password
+ */
 export const signInUser = async (username: string, password: string): Promise<string|null> => {
   const prismaClient = new PrismaClient();
 

@@ -9,7 +9,7 @@ import Link from "next/link";
 import {getCurrentUser} from "@/src/actions/db/user/getCurrentUser";
 import {AuthContext} from "@/src/components/AuthContextProvider";
 
-/** user UserForm to sign in a user */
+/** uses UserForm to sign in a user */
 export const SignIn = () => {
   const router = useRouter();
   const { setUser } = useContext(AuthContext);

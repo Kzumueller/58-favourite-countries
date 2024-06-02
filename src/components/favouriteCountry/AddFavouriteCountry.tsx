@@ -12,6 +12,7 @@ import {CountryDataPoint} from "@/src/components/favouriteCountry/display/Countr
 import {TextArea} from "@/src/components/input/TextArea";
 import {AuthContext} from "@/src/components/AuthContextProvider";
 
+/** Form to add a new favourite country with notes */
 export const AddFavouriteCountry = () => {
   const {user} = useContext(AuthContext);
   const {countries, favouriteCountries, setFavouriteCountries} = useContext(FavouriteCountryContext);
@@ -36,7 +37,7 @@ export const AddFavouriteCountry = () => {
     setSaving(false);
   }, [favouriteCountries, setFavouriteCountries, user])
 
-  /** selectable country options, removes those already favoured */
+  /** selectable country options, removes those already favoured, sorts by name desc, maps for use with Dropdown component */
   const options: { key: string, label: ReactNode, value: Country }[] = useMemo(() => countries
   .filter(country =>
     !favouriteCountries.some(fave => fave.country_id === country.id)
@@ -60,7 +61,6 @@ export const AddFavouriteCountry = () => {
   </button>}
   >
     <Dropdown
-      value={selectedCountry}
       onSelect={setSelectedCountry}
       options={[
         {key: "-1", label: "None", value: null},

@@ -9,6 +9,7 @@ type Props = {
   onPressEnter?: () => void
 };
 
+/** wraps and simplifies a text/email/password input field, optionally supports enter key */
 export const Input = ({ onChange, value, type = "text", disabled = false, placeholder = "", onPressEnter = () => {} }: Props) => {
 
   return <input

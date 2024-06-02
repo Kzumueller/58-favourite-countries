@@ -1,3 +1,4 @@
+/** Next middleware running on start-up - fetches country data via GQL if not yet available */
 export const register = async () => {
   if(process.env.NEXT_RUNTIME !== "nodejs") return;
 

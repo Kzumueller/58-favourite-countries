@@ -8,6 +8,7 @@ type Props = {
   footer?: ReactNode;
 }
 
+/** self-contained component with a title and a footer (useful for buttons) */
 export const Card = ({ children, footer, title }: Props) => {
   return <div className="card w-96 max-w-full bg-base-100 text-gray-700 shadow-xl h-max">
     <div className="card-body">

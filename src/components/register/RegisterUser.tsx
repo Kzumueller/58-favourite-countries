@@ -9,7 +9,7 @@ import {useRouter} from "next/navigation";
 import {AuthContext} from "@/src/components/AuthContextProvider";
 import {getCurrentUser} from "@/src/actions/db/user/getCurrentUser";
 
-/** user UserForm to register a new user */
+/** uses UserForm to register a new user */
 export const RegisterUser = () => {
   const router = useRouter();
   const { setUser } = useContext(AuthContext);

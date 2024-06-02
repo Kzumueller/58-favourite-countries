@@ -8,6 +8,7 @@ type AuthState = {
   setUser: (user: User) => void
 }
 
+/** context holding the current user, only useful on protected routes */
 export const AuthContext = createContext<AuthState>({
   user: null,
   setUser: () => {}

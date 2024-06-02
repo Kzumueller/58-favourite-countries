@@ -4,7 +4,9 @@ import {useCallback, useContext, useEffect} from "react";
 import {AuthContext} from "@/src/components/AuthContextProvider";
 import {getCurrentUser} from "@/src/actions/db/user/getCurrentUser";
 import {useRouter} from "next/navigation";
+import {LogOutButton} from "@/src/components/user/LogOutButton";
 
+/** Client component for fetching the current user, redirects to /login if there is none to be had from the back-end */
 export const AuthSubscriber = () => {
   const router = useRouter();
   const { setUser} = useContext(AuthContext);
@@ -21,5 +23,5 @@ export const AuthSubscriber = () => {
     fetchUser();
   }, [fetchUser]);
 
-  return <></>;
+  return <><LogOutButton /></>;
 }

@@ -1,13 +1,16 @@
-import {ReactNode, useRef, useState} from "react";
+import {ReactNode, useRef} from "react";
 
 type Props = {
   children: ReactNode;
-  value: any;
   onSelect: (value: any) => void;
   options: { key: string, label: ReactNode; value: any }[];
 };
 
-export const Dropdown = ({ children, value, options, onSelect }: Props) => {
+/**
+ * displays the list of options when opened via click, returns the selected option on click via onSelect
+ * children act as trigger
+ */
+export const Dropdown = ({ children, options, onSelect }: Props) => {
   const summaryRef = useRef<HTMLElement>(null);
 
   return <details className="dropdown w-full">

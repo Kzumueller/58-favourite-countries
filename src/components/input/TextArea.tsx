@@ -7,6 +7,7 @@ type Props = {
   onPressEnter?: () => void;
 };
 
+/** Wraps and simplifies a text area, optionally supports the enter key for function calls */
 export const TextArea = ({placeholder, text, onChange, onPressEnter = () => {}}: Props) => {
 
   return <textarea

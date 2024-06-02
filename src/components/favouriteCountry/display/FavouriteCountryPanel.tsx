@@ -10,12 +10,17 @@ import {updateFavouriteCountry} from "@/src/actions/db/favouriteCountry/updateFa
 import {FavouriteCountryContext} from "@/src/components/favouriteCountry/FavouriteCountryContextProvider";
 import {deleteFavouriteCountry} from "@/src/actions/db/favouriteCountry/deleteFavouriteCountry";
 
+/** Favourite country data merged with country meta-data */
 export type CountryData = Required<FavouriteCountry> & Pick<Country, "flag" | "name" | "capital" | "population">
 
 type Props = {
   country: CountryData;
 }
 
+/**
+ * displays all relevant information for a single favourite country,
+ * with options to update notes or remove the country from the list (unfavour, so to speak)
+ */
 export const FavouriteCountryPanel = ({ country }: Props) => {
   const { favouriteCountries, setFavouriteCountries } = useContext(FavouriteCountryContext);
   const [notes, setNotes] = useState<string>(country.notes);
@@ -28,7 +33,7 @@ export const FavouriteCountryPanel = ({ country }: Props) => {
   }, [country.id, favouriteCountries, setFavouriteCountries]);
 
   /**
-   * updates the country with the given notes
+   * updates notes about the current country
    * @param notes
    */
   const saveNotes = useCallback(async (notes: string) => {

@@ -3,6 +3,7 @@ type Props = {
   description?: string;
 };
 
+/** displays an alert at the top of the page */
 export const Alert = ({ message, description }: Props) => {
 
   return <div role="alert" className="fixed max-w-96 right-3 top-16 alert alert-error shadow-lg">

@@ -13,6 +13,11 @@ type Props = {
   showAvailability: boolean
 }
 
+/**
+ * Form asking users for username & password, suitable for both creating and signing in users
+ * if showAvailability is true, the component will check with the back-end whether the username entered is still available
+ * or already taken
+ */
 export const UserForm = ({title, onSubmit, showAvailability}: Props) => {
   const [username, setUsername] = useState("");
   const [usernameValid, setUsernameValid] = useState(true);

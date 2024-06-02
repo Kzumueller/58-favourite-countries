@@ -2,9 +2,11 @@ import {useContext, useMemo} from "react";
 import {FavouriteCountryContext} from "@/src/components/favouriteCountry/FavouriteCountryContextProvider";
 import {CountryData, FavouriteCountryPanel} from "@/src/components/favouriteCountry/display/FavouriteCountryPanel";
 import {Title} from "@/src/components/layout/Title";
+import {Spinner} from "@/src/components/misc/Spinner";
 
+/** Lists all favourite countries */
 export const FavouriteCountryList = () => {
-  const { favouriteCountries, countries } = useContext(FavouriteCountryContext);
+  const { favouriteCountries, countries, loading } = useContext(FavouriteCountryContext);
 
   /**
    * merges favourites with their countries' data
@@ -29,6 +31,7 @@ export const FavouriteCountryList = () => {
   return <div className="flex flex-col">
     {listedCountries.length > 0 && <Title>My Favourites</Title>}
     <div className="flex justify-center flex-wrap gap-x-4 gap-y-4">
+      {loading && <Spinner />}
       {listedCountries.map(country => <div key={country.id}>
         <FavouriteCountryPanel country={country}/>
       </div>)}

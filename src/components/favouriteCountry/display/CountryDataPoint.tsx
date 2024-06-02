@@ -6,6 +6,7 @@ type Props = {
   value: ReactNode | number;
 }
 
+/** displays a single key-value pair of data as a column */
 export const CountryDataPoint = ({property, value}: Props) => {
   const numberFormatter = useMemo(() => new Intl.NumberFormat(
     typeof window !== "undefined"

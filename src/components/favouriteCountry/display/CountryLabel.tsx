@@ -6,6 +6,7 @@ type Props = {
   flag: string;
 }
 
+/** displays a country's flag and name in a row */
 export const CountryLabel = ({name, flag}: Props) => <div
   className="inline-flex gap-x-2 w-full"
 >
