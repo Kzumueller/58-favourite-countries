@@ -40,7 +40,7 @@ export const fetchCountries = async () => {
   const countries: Country[] = data.countries.edges.map(({ node: { id, name, capital, population, alpha3Code } }: { node: Node }) => ({
     id: Number(atob(id).split(":")[1]), // ids are base64 encoded as "CountryCode:<index>"
     name,
-    capital,
+    capital: capital || "None",
     population,
     flag: `${alpha3Code.toLowerCase()}.svg` // append to static URL prefix @see component Flag.tsx
   }));

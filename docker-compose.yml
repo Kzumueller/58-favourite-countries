@@ -19,7 +19,8 @@ services:
     networks:
       - hub
     depends_on:
-      - postgres
+      postgres:
+        condition: service_started
 
   postgres:
     networks:

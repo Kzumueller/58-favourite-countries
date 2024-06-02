@@ -5,24 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77cf56a8-11fc-4d91-be70-703bd57aba57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/AuthContextProvider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AuthSubscriber.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/db/favouriteCountry/deleteFavouriteCountry.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/db/favouriteCountry/deleteFavouriteCountry.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/favouriteCountry/AddFavouriteCountry.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favouriteCountry/AddFavouriteCountry.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/favouriteCountry/CountryDataPoint.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favouriteCountry/display/CountryDataPoint.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/favouriteCountry/FavouriteCountry.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favouriteCountry/FavouriteCountry.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/favouriteCountry/FavouriteCountryContextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favouriteCountry/FavouriteCountryContextProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/favouriteCountry/FavouriteCountrySubscriber.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favouriteCountry/FavouriteCountrySubscriber.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/favouriteCountry/display/FavouriteCountryPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favouriteCountry/display/FavouriteCountryPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/TextArea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/TextArea.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login/SignIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/SignIn.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/register/RegisterUser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/register/RegisterUser.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/user/UserForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user/UserForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/gql/fetch-countries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/gql/fetch-countries.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +117,7 @@
       <workItem from="1717225759729" duration="16019000" />
       <workItem from="1717264430609" duration="1890000" />
       <workItem from="1717266579028" duration="15224000" />
-      <workItem from="1717318148394" duration="16379000" />
+      <workItem from="1717318148394" duration="17069000" />
     </task>
     <servers />
   </component>
