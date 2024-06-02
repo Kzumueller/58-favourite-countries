@@ -68,6 +68,7 @@ export const UserForm = ({title, onSubmit, showAvailability}: Props) => {
             placeholder="Password"
             value={password}
             onChange={setPassword}
+            onPressEnter={() => onSubmit(username, password)}
           />
         </div>
       </div>

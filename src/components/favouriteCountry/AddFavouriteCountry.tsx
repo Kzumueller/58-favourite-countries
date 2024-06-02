@@ -8,11 +8,13 @@ import {Dropdown} from "@/src/components/input/Dropdown";
 import {CountryLabel} from "@/src/components/favouriteCountry/display/CountryLabel";
 import {addFavouriteCountry} from "@/src/actions/db/favouriteCountry/addFavouriteCountry";
 import {Spinner} from "@/src/components/misc/Spinner";
-import {CountryDataPoint} from "@/src/components/favouriteCountry/CountryDataPoint";
+import {CountryDataPoint} from "@/src/components/favouriteCountry/display/CountryDataPoint";
 import {TextArea} from "@/src/components/input/TextArea";
+import {AuthContext} from "@/src/components/AuthContextProvider";
 
 export const AddFavouriteCountry = () => {
-  const {user, countries, favouriteCountries, setFavouriteCountries} = useContext(FavouriteCountryContext);
+  const {user} = useContext(AuthContext);
+  const {countries, favouriteCountries, setFavouriteCountries} = useContext(FavouriteCountryContext);
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
   const [notes, setNotes] = useState<string>("");
 
@@ -76,7 +78,12 @@ export const AddFavouriteCountry = () => {
         <CountryDataPoint property="Population" value={selectedCountry.population} />
       </div>
 
-      <TextArea text={notes} onChange={setNotes} placeholder={"Notes ..."} />
+      <TextArea
+        text={notes}
+        onChange={setNotes}
+        placeholder={"Notes ..."}
+        onPressEnter={() => saveFavouriteCountry(selectedCountry!, notes)}
+      />
     </>}
   </Card>
 }

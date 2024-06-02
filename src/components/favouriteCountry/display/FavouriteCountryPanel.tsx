@@ -3,7 +3,7 @@
 import {Country, FavouriteCountry} from ".prisma/client";
 import {Card} from "@/src/components/layout/Card";
 import {CountryLabel} from "@/src/components/favouriteCountry/display/CountryLabel";
-import {CountryDataPoint} from "@/src/components/favouriteCountry/CountryDataPoint";
+import {CountryDataPoint} from "@/src/components/favouriteCountry/display/CountryDataPoint";
 import {useCallback, useContext, useMemo, useState} from "react";
 import {TextArea} from "@/src/components/input/TextArea";
 import {updateFavouriteCountry} from "@/src/actions/db/favouriteCountry/updateFavouriteCountry";
@@ -25,7 +25,7 @@ export const FavouriteCountryPanel = ({ country }: Props) => {
     await deleteFavouriteCountry(country.id);
 
     setFavouriteCountries(favouriteCountries.filter(entry => entry.id !== country.id));
-  }, [country]);
+  }, [country.id, favouriteCountries, setFavouriteCountries]);
 
   /**
    * updates the country with the given notes

@@ -9,5 +9,5 @@ import {PrismaClient} from ".prisma/client";
 export const deleteFavouriteCountry = async (id: string): Promise<void> => {
   const prismaClient = new PrismaClient();
 
-  prismaClient.favouriteCountry.delete({ where: { id } });
+  await prismaClient.favouriteCountry.delete({ where: { id } })
 }
