@@ -42,7 +42,7 @@ export const fetchCountries = async () => {
     name,
     capital,
     population,
-    flag: `${alpha3Code.toLowerCase()}.svg` // append to env var NEXT_PUBLIC_FLAG_URL
+    flag: `${alpha3Code.toLowerCase()}.svg` // append to static URL prefix @see component Flag.tsx
   }));
 
   await prismaClient.country.createMany({ data: countries });

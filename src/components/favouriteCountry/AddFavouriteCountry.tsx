@@ -1,73 +1,82 @@
 "use client"
 
-import {ReactNode, useContext, useMemo, useState} from "react";
+import {ReactNode, useCallback, useContext, useMemo, useState} from "react";
 import {FavouriteCountryContext} from "@/src/components/favouriteCountry/FavouriteCountryContextProvider";
 import {Card} from "@/src/components/layout/Card";
 import {Country} from ".prisma/client";
 import {Dropdown} from "@/src/components/input/Dropdown";
-import {CountryLabel} from "@/src/components/favouriteCountry/CountryLabel";
-import {Label} from "@/src/components/layout/Label";
-
-const numberFormatter = new Intl.NumberFormat(window?.navigator?.language)
+import {CountryLabel} from "@/src/components/favouriteCountry/display/CountryLabel";
+import {addFavouriteCountry} from "@/src/actions/db/favouriteCountry/addFavouriteCountry";
+import {Spinner} from "@/src/components/misc/Spinner";
+import {CountryDataPoint} from "@/src/components/favouriteCountry/CountryDataPoint";
+import {TextArea} from "@/src/components/input/TextArea";
 
 export const AddFavouriteCountry = () => {
-  const {countries, favouriteCountries, setFavouriteCountries} = useContext(FavouriteCountryContext);
+  const {user, countries, favouriteCountries, setFavouriteCountries} = useContext(FavouriteCountryContext);
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
   const [notes, setNotes] = useState<string>("");
 
+  const [saving, setSaving] = useState<boolean>(false);
+
+  /**
+   * saves the currently selected country with the current notes
+   * updates local favourite countries, unsets selections
+   * @param selectedCountry
+   * @param notes
+   */
+  const saveFavouriteCountry = useCallback(async (selectedCountry: Country, notes: string) => {
+    setSaving(true);
+    const favouriteCountry = await addFavouriteCountry(user!.id, selectedCountry!.id, notes)
+
+    setFavouriteCountries([favouriteCountry, ...favouriteCountries])
+    setSelectedCountry(null);
+    setNotes("");
+    setSaving(false);
+  }, [favouriteCountries, setFavouriteCountries, user])
+
+  /** selectable country options, removes those already favoured */
   const options: { key: string, label: ReactNode, value: Country }[] = useMemo(() => countries
   .filter(country =>
     !favouriteCountries.some(fave => fave.country_id === country.id)
-  ).map(country => ({
+  )
+  .sort((left, right) => left.name < right.name ? -1 : 1)
+  .map(country => ({
       key: country.id.toString(),
-      label: <CountryLabel country={country} />,
+      label: <CountryLabel flag={country.flag} name={country.name} />,
       value: country,
     })
   ), [countries, favouriteCountries]);
 
-  return <Card title={"Add a favourite country"}>
+  return <Card
+    title={"Add a favourite country"}
+    footer={<button
+      className="btn btn-primary btn-sm"
+      disabled={!selectedCountry || saving}
+      onClick={() => saveFavouriteCountry(selectedCountry!, notes)}>
+      {saving && <Spinner />}
+      Add to Favourites
+  </button>}
+  >
     <Dropdown
       value={selectedCountry}
       onSelect={setSelectedCountry}
-      options={options}
+      options={[
+        {key: "-1", label: "None", value: null},
+        ...options
+      ]}
     >
       {selectedCountry
-        ? <CountryLabel country={selectedCountry} />
+        ? <CountryLabel flag={selectedCountry.flag} name={selectedCountry.name} />
         : <div>Select Country</div>}
     </Dropdown>
 
     {selectedCountry && <>
       <div className="flex justify-between">
-        <div className="flex flex-col pt-4 gap-2">
-          <Label>
-            Capital:
-          </Label>
-          <div>
-            {selectedCountry.capital}
-          </div>
-        </div>
-
-        <div className="flex flex-col pt-4 gap-2">
-          <Label>
-            Population:
-          </Label>
-          <div>
-            {numberFormatter.format(Number(selectedCountry.population))}
-          </div>
-        </div>
+        <CountryDataPoint property="Capital" value={selectedCountry.capital} />
+        <CountryDataPoint property="Population" value={selectedCountry.population} />
       </div>
 
-      <textarea
-        className="textarea textarea-bordered w-full mt-4"
-        placeholder="Notes ..."
-        maxLength={1024}
-        value={notes}
-        onChange={({ target: { value } }) => setNotes(value)}
-      />
-
-      <div className="flex justify-end mt-4">
-        <button className="btn btn-primary">Add to Favourites</button>
-      </div>
+      <TextArea text={notes} onChange={setNotes} placeholder={"Notes ..."} />
     </>}
   </Card>
 }

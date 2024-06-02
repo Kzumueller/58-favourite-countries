@@ -21,10 +21,10 @@ model User {
 }
 
 model Country {
-  id Decimal @db.Decimal(4, 0) @id
+  id Int @id
   name String @db.VarChar(64)
   capital String @db.VarChar(64)
-  population Decimal @db.Decimal(10, 0)
+  population Int
   flag String @db.Char(7)
   users FavouriteCountry[]
 }
@@ -34,6 +34,6 @@ model FavouriteCountry {
   user User @relation(fields: [user_id], references: [id])
   user_id String
   country Country @relation(fields: [country_id], references: [id])
-  country_id Decimal
+  country_id Int
   notes String
 }

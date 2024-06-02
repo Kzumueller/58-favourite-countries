@@ -3,12 +3,13 @@ FROM node:20-alpine
 WORKDIR /app
 
 COPY package.json package-lock.json* ./
+RUN npm i npm@latest
 RUN npm i
 
 COPY src ./src
 COPY prisma ./prisma
 COPY public ./public
-COPY entrypoint.sh .env next.config.mjs tsconfig.json .eslintrc.json next-env.d.ts postcss.config.mjs tailwind.config.ts ./
+COPY entrypoint.sh next.config.mjs tsconfig.json .eslintrc.json next-env.d.ts postcss.config.mjs tailwind.config.ts ./
 
 ENV NEXT_TELEMETRY_DISABLED 1
 

@@ -1,7 +1,12 @@
-import type { NextRequest } from "next/server"
-import {jwtVerify} from "jose";
+import type {NextRequest} from "next/server"
 import {verifyToken} from "@/src/lib/verifyToken";
 
+/**
+ * Middleware ensuring user authorization via valid JWT
+ * Logged-in users attempting to /login or /register will be redirected to /
+ * Not-logged-in users attempting to access / will be sent to /login
+ * @param request
+ */
 export async function middleware(request: NextRequest) {
   const token = request.cookies.get("token")?.value;
 
@@ -31,5 +36,5 @@ export async function middleware(request: NextRequest) {
 export const runtime = 'nodejs';
 
 export const config = {
-  matcher: ["/"]
+  matcher: ["/", "/login", "/register"]
 }

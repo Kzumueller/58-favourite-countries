@@ -9,7 +9,7 @@ type Props = {
 }
 
 export const Card = ({ children, footer, title }: Props) => {
-  return <div className="card w-96 bg-base-100 shadow-xl h-max">
+  return <div className="card w-96 max-w-full bg-base-100 text-gray-700 shadow-xl h-max">
     <div className="card-body">
       {title && <div className="card-title mb-4">{title}</div>}
       {children}
